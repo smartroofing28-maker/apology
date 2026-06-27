@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry</title>
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#090014,#1d0d3d,#290a50);
+font-family:Arial,sans-serif;
+overflow:hidden;
+color:white;
+}
+.container{
+text-align:center;
+padding:30px;
+width:80%;
+max-width:700px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:30px;
+box-shadow:0 0 30px rgba(174,0,255,.5);
+}
+.character{
+font-size:100px;
+animation:bounce 2s infinite;
+}
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+margin:10px;
+}
+.yes{background:#bb86fc;color:white;}
+.no{background:#444;color:white;position:relative;}
+@keyframes bounce{
+50%{transform:translateY(-15px);}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="character">🥺</div>
+
+<h1>I'm Sorry 💜</h1>
+
+<p>
+I truly regret my actions and I never wanted to hurt you.
+I understand if you're upset, but I hope I can earn back your trust.
+</p>
+
+<h2>Will you forgive me?</h2>
+
+<button class="yes" onclick="forgive()">Yes ❤️</button>
+<button class="no" id="noBtn">No 😔</button>
+
+</div>
+
+<script>
+function forgive(){
+alert("Thank you 💜 I appreciate it.");
+}
+
+const btn=document.getElementById("noBtn");
+
+btn.addEventListener("mouseover",()=>{
+btn.style.left=(Math.random()*200-100)+"px";
+btn.style.top=(Math.random()*100-50)+"px";
+});
+</script>
+
+</body>
+</html>
